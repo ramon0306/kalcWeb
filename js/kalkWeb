@@ -1,1 +1,8 @@
-
+function setValue(value){
+	obj = document.getElementById('tela');
+	obj.value = obj.value+value;
+}
+function limpar(){
+	obj = document.getElementById('tela');	
+	obj.value = '';
+}
