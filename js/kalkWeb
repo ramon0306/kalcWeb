@@ -1,8 +1,43 @@
-function setValue(value){
-	obj = document.getElementById('tela');
-	obj.value = obj.value+value;
+const botoes = document.querySelectorAll(".numbers button");
+const mostrar = document.querySelector(".screen");
+const operadores = document.querySelectorAll(".operators button");
+
+function show (a){ 
+	console.log(a);
+	mostrar.innerText += a;
 }
-function limpar(){
-	obj = document.getElementById('tela');	
-	obj.value = '';
+
+for (let x = 0; x<botoes.length; x++){ //ler os botões
+	botoes[x].onclick = (e) => show (e.target.innerText);
+}
+
+apagar.onclick = (e) => clear();
+
+function clear(){ //função limpar a tela
+	mostrar.innerText = "";
+}
+
+for (let x = 0; x<operadores.length; x++) { //ler os operadores.
+	operadores[x].onclick = (e) => show(e.target.innerText);
+}
+for (let i = 0; i <operacoes.length; i++) {
+
+	switch(operacoes){
+		case'soma':
+		numero1 + numero2;       //Aqui eu deveria fazer a operação com os números que são digitados, mas eu nao consigo
+							//receber esses numeros.
+		break;
+
+		case'subtracao':
+		numero1 - numero2;
+		break;
+
+		case'multiplicacao':
+		numero1 * numero2;
+		break;
+
+		case'divisao':
+		numero1 / numero2;
+		
+	}
 }
